@@ -25,7 +25,10 @@ func split(sum int) (x, y int) {
 	return
 }
 
-func basics() {
+func main() {
+	// vars and printing
+	fmt.Println("------------Basics------------\n")
+
 	// Each method from a package starts with a capital char
 	fmt.Println(isDank, MaxInt, str)
 	fmt.Println("Hola!")
@@ -37,12 +40,6 @@ func basics() {
 	// equivalent to var statement
 	c := 17
 	fmt.Println(split(c))
-}
-
-func main() {
-	// vars and printing
-	fmt.Println("------------Basics------------")
-	basics()
 }
 
 // This is a cheat sheet made from the Golang tour @ https://tour.golang.org

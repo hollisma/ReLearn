@@ -5,11 +5,7 @@ import (
 	"math"
 )
 
-func main() {
-	// vars and printing
-	fmt.Println("------------Basics------------")
-	// basics()
-	
+func main() {	
 	// loops and conditionals
 	fmt.Println("---------Flow Control---------")
 	// flowControl()

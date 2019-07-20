@@ -5,25 +5,6 @@ import (
 	"math"
 )
 
-// func name(var1, var2 type) return_type {}
-func add(x, y int) int {
-	return x + y
-}
-
-// func name(var1 type) (return1, return2 type) {}
-func split(sum int) (x, y int) {
-	x = sum * 4 / 9
-	y = sum - x
-	// "naked" return. just returns specified stuff
-	return
-}
-
-var (
-	isDank bool   = true
-	MaxInt uint64 = 1<<64 - 1
-	str    string = string(54)
-)
-
 func main() {
 	// vars and printing
 	fmt.Println("------------Basics------------")
@@ -41,12 +22,6 @@ func main() {
 	
 	fmt.Println("-------------Maps-------------")
 	// maps()
-	
-	fmt.Println("----------Functional----------")
-	functional()
-	
-	fmt.Println("------------Methods-----------")
-	methods()	
 }
 
 func basics() {
@@ -216,99 +191,3 @@ func maps() {
 	elem, ok = n["Google"]
 	fmt.Println(elem, ok)
 }
-
-func functional() {
-
-	// Can store functions as vars
-	// Closure
-	// func compute(fn func(float64, float64) float64) float64 {
-	// 	return fn(3, 4)
-	// }
-
-	hypot := func(x, y float64) float64 {
-		return math.Sqrt(x*x + y*y)
-	}
-
-	fmt.Println(compute(hypot))
-	fmt.Println(compute(math.Pow))
-
-	// Closure
-	// func adder() func(int) {
-	// 	sum := 0
-	// 	return func(x int) int {
-	// 		sum += x
-	// 		return sum
-	// 	}
-	// }
-
-	pos, neg := adder(), adder()
-	for i := 0; i < 10; i++ {
-		fmt.Println(
-			pos(i), 
-			neg(-2*i),
-		)
-	}
-
-	// Cool way to do fibonacci with closures. Not good code but the way it works is interesting
-	// func fibonacci() func() int {
-	// 	prev := 0
-	// 	curr := 0
-	// 	return func() int {
-	// 		if prev == 0 {
-	// 			prev = 1
-	// 			return curr
-	// 		}
-	// 		curr += prev
-	// 		prev = curr - prev
-	// 		return curr
-	// 	}
-	// }
-
-	f := fibonacci()
-	for i := 0; i < 10; i++ {
-		fmt.Println(f())
-	}
-}
-func compute(fn func(float64, float64) float64) float64 {
-	return fn(3, 4)
-}
-func adder() func(int) int {
-	sum := 0
-	return func(x int) int {
-		sum += x
-		return sum
-	}
-}
-func fibonacci() func() int {
-	prev := 0
-	curr := 0
-	return func() int {
-		if prev == 0 {
-			prev = 1
-			return curr
-		}
-		curr += prev
-		prev = curr - prev
-		return curr
-	}
-}
-
-func methods() {
-	// Go doesn't have classes, but you can define methods by adding a receiver argument to the function
-	type Vertex struct {
-		X, Y float64
-	}
-	// Receiver arg is (v Vertex)
-	func (v Vertex) Abs() float64 {
-		return math.Sqrt(v.X*v.X + v.Y+v.Y)
-	}
-	// No receiver
-	func Abs(v Vertex) float64 {
-		return math.Sqrt(v.X*v.X + v.Y*v.Y)
-	}
-	v := Vertex{3, 4}
-	fmt.Println(v.Abs())
-	fmt.Println(Abs(v))
-}
-
-// This is a cheat sheet made from the Golang tour @ https://tour.golang.org

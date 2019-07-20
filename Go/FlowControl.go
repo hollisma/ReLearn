@@ -26,6 +26,7 @@ func main() {
 	// Infitinte loop
 	// for {}
 
+	// If statement
 	fmt.Println("--------------If--------------")
 	if 1 < 2 {
 		fmt.Println("1 < 2")

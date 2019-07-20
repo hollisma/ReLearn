@@ -1,0 +1,5 @@
+On Linux:
+  "sudo apt-get install golang-go"
+
+To run go program:
+  "go run file_name.go"

@@ -42,8 +42,8 @@ func main() {
 	fmt.Println(compute(hypot))
 	fmt.Println(compute(math.Pow))
 
-	fmt.Println("-----------Closure------------")
 	// Closure
+	fmt.Println("-----------Closure------------")
 	pos, neg := adder(), adder()
 	for i := 0; i < 10; i++ {
 		fmt.Println(

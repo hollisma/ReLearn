@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	fmt.Println("-------------Maps-------------\n")
 
+	// How to create a struct. Same as in C
 	type Vertex struct {
 		Lat, Long float64
 	}

@@ -6,6 +6,7 @@ import (
 	"fmt"
 )
 
+// Declaring variables
 var (
 	isDank bool   = true
 	MaxInt uint64 = 1<<64 - 1

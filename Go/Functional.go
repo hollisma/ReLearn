@@ -59,3 +59,5 @@ func main() {
 		fmt.Println(f())
 	}
 }
+
+// This is a cheat sheet made from the Golang tour @ https://tour.golang.org

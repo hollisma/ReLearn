@@ -1,0 +1,31 @@
+scanf("%d", %i);
+s = fgets(s, size, stdin);
+printf("%d", i);
+fputs(s, stdout);
+fprintf(stderr, "%d", i);
+
+char, unsigned char, short, int, long, float, double, float double
+ps->f <-- structure dereference and field selector
+(type) <-- cast
+*p, &x <-- dereferences and address of
+i++, ++int
+sizeof(type) <-- sizeof
+x == y and x != y
+i && j and i || j
+i ? x : y
+
+if (intOrPtrExpr) statment else statement
+0 or NULL pointer are false, all else true
+switch (expr) {
+  case(1): 
+    statement; break;
+  default: 
+    statement;
+}
+while(expr) statement;
+do statement while(expr);
+for (initExpr; intOrPtrExpr; incExpr) statement;
+break; continue; return;
+
+assert()
+private/static: validate parameters via assert

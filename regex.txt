@@ -1,0 +1,36 @@
+\d is a digit charactier. 
+  \d\d\d-\d\d\d-\d\d\d\d is phone number
+\D si any char that is not 0-9
+\w is any letter, number, or underscore (all matching "word" characters)
+\W everything besides \w
+\s any space,tab,newline
+\S everything besides \s
+[0-5] matches 0-5
+[aeiouAEIOU] defines custom character class
+[^...] means not. so [^aeiousAEIOUS] matches constanants
+'^...$' carrot means beginning, dollar means end
+. is wildcard
+  . matches everything but newline. if want newline, pass re.DOTALL as second param
+(.*) is anything
+{x} means match pattern x times. 
+  \d{3}-\d{3}-\d{4} is phone number
+{x,y} means match pattern x to y times. 
+{x,} means at least x
+{,y} means at most y
+{x,y}? denotes non greedy
+| is piping. a|b will match a and b
+()? denotes match zero or one. optional part of pattern
+()* denotes match zero or more
+()+ denotes match one or more
+pass re.I or re.IGNORECASE as second param to do case-insensitive
+pass re.VERBOSE to ignore comments
+patternRegex.sub(x, string) replaces all instances of pattern in string with x
+
+
+
+PYTHON: import re; re.compile(r'regexPattern'); re.search('textToSearch'); mo.group() to return matches
+  re.compile(r'(\d)(\d)(\d)); mo.group(1) == first \d == first parenthesis match
+  Python's regex is greedy by default
+  finall() finds all
+  if matches have groups, finall() returns tuples
+

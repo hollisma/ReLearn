@@ -1,0 +1,77 @@
+int, long, float, str ('hi', "hi", r'hi\there'), bool (True, False)
+{key: value} <-- dictionary
+[a, ...] <-- list
+(a, ...) <-- tuple
+x[startindex:stopindex] <-- slicing
+x[i] <-- indexing (lists and charAt)
+5 // 2 = 2
+5 / 2 = 2.5
+x == y and y != y
+x is y and x is not y
+x in y and x not in y
+not x, x and y, x or y
+
+str = raw_input(promptStr)
+from sys important stdin
+str = stdin.readline()
+
+print str
+print >>stderr, str
+
+assert expr, message
+f(expr, name=default)
+if expr: 
+  statement
+elif expr:
+  statement
+else: 
+  statemment
+False, 0, None, '', "", [], (), {} all indicate logical FALSE. all else True
+while expr:
+  statement
+for var in range(start, stop):
+for var in range(stop):
+for var in iterable:
+for key,value in mapping.iteritems():
+break   continue
+try:
+  statemment
+except [ExceptionType[, var]]:
+  statement
+raise ExceptionType(str)
+
+constructor: __init:()
+explicit self parameter that goes into each method
+default arguments
+use of underscore to describe private vs. public
+__str__() method is same as str(), implicitly called by print
+__hash__() method is same as hash(), used for keys in hash table
+__eq__() method is same as obj1 == obj2
+similarly for __ne__(), __lt__(), ...
+
+obj1 is obj2 tests for references/identity
+s1 == s2 tests for equality and can be overriden
+python is pure object-oriented language in that ints and bools are objects
+
+instead of debugging with print(), use logging:
+
+  import logging
+  logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+  logging.debug('Start of program')
+  ...
+  logging.info() 
+  logging.warning()
+  logging.error()
+  logging.critical()
+  logging.debug('End of program')
+
+if done debugging, just add: 
+  logging.disable(logging.CRITICAL)
+  # suppresses all messages at a lower level
+
+if __name__ == '__main__':
+  # this is the main method. used so that if file is imported, doesn't get run
+
+lambda functions basically allow you to use functions are variables. allows for functional programming
+
+new_list = [expression(i) for i in old_list if filter(i)]

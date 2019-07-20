@@ -1,0 +1,43 @@
+$ javac Hello.java
+$ java Hello
+use try...catch statement
+Scanner for input
+i++, ++i
+new Class() for object creation
+(type) for type cast
+obj instanceof Class
+x == y and x != y
+x && y and x || y
+a ? x : y
+x += y
+
+import java.util.Scanner;
+Scanner scanner = new Scanner(System.in);
+int i = scanner.nextInt();
+
+System.out.println(i);
+
+if (expr) statement else statement;
+switch (expr) {
+  case (1):
+    statement; breakl
+  default: 
+    statement;
+}
+while (expr) statement;
+do statement while (expr);
+for (initExpr; booleanExpr; incrExpr) statement;
+for (type var : IterableOrArray) statement;
+break; continue; return;
+try { statement; } catch (ExceptionType e) { statement; }
+throw object;
+
+private fields, constructors, method overloading
+private vs. public methods, overriding of toString(), equals(), hashCode()
+new operator, definition of main()
+
+obj1 == obj2 tests for references/identity
+obj1.equals(obj2) tests for equality. can override
+
+java is a hybrid object-oriented language in that it uses primitive and objects
+

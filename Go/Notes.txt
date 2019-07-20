@@ -3,3 +3,16 @@ On Linux:
 
 To run go program:
   "go run file_name.go"
+
+The null/None value is called "nil"
+
+String formats:
+  %v => value (e.g. pointer)
+  %T => type
+  %d => decimal number
+  
+  %b => binary
+  %t => bool
+  %c => char corresponding to int
+  %x => hex
+  %f => float

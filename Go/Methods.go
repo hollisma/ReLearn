@@ -23,7 +23,9 @@ func Abs(v Vertex) float64 {
 func main() {
 	fmt.Println("----------Functional----------\n")
 	v := Vertex{3, 4}
+	fmt.Println("---------Receiver fun---------")
 	fmt.Println(v.Abs())
+	fmt.Println("---------Regular func---------")
 	fmt.Println(Abs(v))
 }
 
